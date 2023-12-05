@@ -12,6 +12,5 @@ export default new Router({
       name: "home",
       component: HomePage,
     },
-    // você pode adicionar mais rotas aqui
   ],
 });
