@@ -57,7 +57,7 @@ $ git clone https://github.com/Danilo-Js/Kanb-Ex.git
 
 Navigate to the project directory
 ```bash 
-$ cd Kanban-Example
+$ cd Kanb-Ex
 ```
 
 Install dependencies
