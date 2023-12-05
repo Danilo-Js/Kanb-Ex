@@ -1,4 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import localforage from "localforage";
 
-createApp(App).mount('#app')
+localforage.config({
+  name: "kanbex",
+  storeName: "kanban_tasks",
+});
+
+createApp(App).mount("#app");
