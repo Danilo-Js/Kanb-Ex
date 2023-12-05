@@ -75,4 +75,4 @@ This project is [licensed by MIT](https://github.com/Danilo-Js/Kanb-Ex/blob/mast
 
 ---
 
-#### Made by Danilo José Lima de Oliveira and 
+#### Made by Danilo José Lima de Oliveira and Bernardo Mangaraviti Carrerette
