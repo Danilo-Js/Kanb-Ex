@@ -1,19 +1,19 @@
 <template>
-  <header class="app-header">
-    <h1>Kanb Ex</h1>
-    <!-- Navegação ou outras informações do cabeçalho ficam aqui -->
-  </header>
+  <footer class="app-footer">
+    <p>&copy; 2023 Kanb Ex - Todos os direitos reservados.</p>
+    <!-- Informações adicionais do rodapé podem ser adicionadas aqui -->
+  </footer>
 </template>
 
 <script>
 export default {
-  name: "TheHeader",
-  // Dados ou métodos relacionados ao cabeçalho ficam aqui
+  name: "TheFooter",
+  // Propriedades ou métodos do rodapé podem ser adicionados aqui
 };
 </script>
 
 <style scoped>
-.app-header {
+.app-footer {
   background-color: #333;
   color: white;
   padding: 10px 20px;
