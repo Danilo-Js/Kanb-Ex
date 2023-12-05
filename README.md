@@ -1,3 +1,7 @@
+<h1 align="center">
+  Kanban Example
+</h1>
+
 <p align="center">
   <a href="https://img.shields.io/github/repo-size/Danilo-Js/Kanb-Ex/commits/master">
     <img alt="Repository size" src="https://img.shields.io/github/repo-size/Danilo-Js/Kanb-Ex">
@@ -13,10 +17,6 @@
   
   <img alt="Repository license" src="https://img.shields.io/github/license/Danilo-Js/Kanb-Ex">
 </p>
-
-<h1 align="center">
-  Kanban Example
-</h1>
 
 <p align="center">
 A Kaban-like task management simulator
