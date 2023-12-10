@@ -1,10 +1,7 @@
 <template>
   <div class="task-details">
     <the-header></the-header>
-    <!-- Cabeçalho -->
-    <!-- Conteúdo da tarefa específica -->
     <the-footer></the-footer>
-    <!-- Rodapé -->
   </div>
 </template>
 
@@ -26,14 +23,8 @@ export default {
   },
   data() {
     return {
-      // Detalhes da tarefa podem ser buscados do estado global (Vuex) ou LocalForage
       taskDetails: null,
     };
   },
 };
 </script>
-
-<style scoped>
-.task-details {
-}
-</style>

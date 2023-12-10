@@ -1,14 +1,12 @@
 <template>
   <header class="app-header">
     <h1>Kanb Ex</h1>
-    <!-- Navegação ou outras informações do cabeçalho ficam aqui -->
   </header>
 </template>
 
 <script>
 export default {
   name: "TheHeader",
-  // Dados ou métodos relacionados ao cabeçalho ficam aqui
 };
 </script>
 

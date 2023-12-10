@@ -1,14 +1,12 @@
 <template>
   <footer class="app-footer">
-    <p>&copy; 2023 Kanb Ex - Todos os direitos reservados.</p>
-    <!-- Informações adicionais do rodapé podem ser adicionadas aqui -->
+    <p>&copy; 2023 Kanb Ex - MIT License project.</p>
   </footer>
 </template>
 
 <script>
 export default {
   name: "TheFooter",
-  // Propriedades ou métodos do rodapé podem ser adicionados aqui
 };
 </script>
 

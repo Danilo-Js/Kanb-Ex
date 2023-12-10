@@ -1,7 +1,7 @@
 <template>
   <div class="task-list">
     <h2>{{ title }}</h2>
-    <div v-for="task in tasks" :key="task.id">
+    <div v-for="task in filteredTasks" :key="task.id">
       <task-card :task="task" />
     </div>
   </div>
@@ -17,15 +17,23 @@ export default {
   },
   props: {
     tasks: {
-      type: Array,
+      type: Object,
       required: true,
     },
     title: {
       type: String,
       required: true,
     },
+    status: {
+      type: String,
+      required: true,
+    },
   },
-  // Métodos para manipulação do TaskList ficarão aqui
+  computed: {
+    filteredTasks() {
+      return this.tasks.filter((task) => task.status === this.status);
+    },
+  },
 };
 </script>
 
