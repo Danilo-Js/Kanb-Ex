@@ -64,11 +64,23 @@ export default {
   background-color: rgb(185, 180, 180);
 }
 
-.ongoing {
-  background-color: rgb(247, 131, 131);
+.task-card button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s;
+  color: #333;
 }
 
-.completed {
-  background-color: rgb(90, 202, 90);
+.task-card button:hover {
+  opacity: 0.9;
+}
+
+.task-card button:last-child {
+  margin-right: 0;
 }
 </style>
