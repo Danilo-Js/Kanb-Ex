@@ -9,7 +9,7 @@
     <p><strong>Descrição: </strong> {{ task.description }}</p>
     <p><strong>Prazo: </strong> {{ task.deadline }}</p>
     <p><strong>Tempo Estimado: </strong> {{ task.estimatedTime }}</p>
-    <p><strong>Status: </strong> {{ task.status }}</p>
+    <p><strong>Status: </strong> {{ formatStatus(task.status) }}</p>
   </div>
 </template>
 
@@ -29,6 +29,14 @@ export default {
     },
     deleteTask(taskId) {
       this.$emit("delete", taskId);
+    },
+    formatStatus(status) {
+      const statusText = {
+        active: "Ativa",
+        ongoing: "Em Andamento",
+        completed: "Concluída",
+      };
+      return statusText[status] || status;
     },
   },
   computed: {
