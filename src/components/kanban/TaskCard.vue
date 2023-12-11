@@ -1,5 +1,7 @@
 <template>
-  <div v-for="task in tasks2" :key="task.status" class="task-card">
+  <div class="task-card">
+    <button @click="completeTask(task.id)">Completar</button>
+    <button @click="deleteTask(task.id)">Excluir</button>
     <p><strong>Nome: </strong> {{ task.name }}</p>
     <p><strong>Responsável: </strong> {{ task.responsible }}</p>
     <p><strong>Descrição: </strong> {{ task.description }}</p>
@@ -15,6 +17,16 @@ export default {
     task: {
       type: Object,
       required: true,
+    },
+  },
+  emits: ["complete", "delete"],
+  methods: {
+    completeTask(taskId) {
+      this.$emit("complete", taskId);
+    },
+    deleteTask(taskId) {
+      console.log("Deleting task with ID:", taskId);
+      this.$emit("delete", taskId);
     },
   },
   computed: {

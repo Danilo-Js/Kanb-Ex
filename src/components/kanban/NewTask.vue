@@ -40,6 +40,7 @@ export default {
           (this.estimatedTime = "");
       } else {
         this.$store.dispatch("addTask", {
+          id: Date.now(),
           name: this.name,
           responsible: this.responsible,
           description: this.description,

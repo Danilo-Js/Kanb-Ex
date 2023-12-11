@@ -2,7 +2,11 @@
   <div class="task-list">
     <h2>{{ title }}</h2>
     <div v-for="task in filteredTasks" :key="task.id">
-      <task-card :task="task" />
+      <task-card
+        :task="task"
+        @complete="handleComplete"
+        @delete="handleDelete"
+      />
     </div>
   </div>
 </template>
@@ -27,6 +31,15 @@ export default {
     status: {
       type: String,
       required: true,
+    },
+  },
+  methods: {
+    handleComplete(taskId) {
+      this.$store.dispatch("completeTask", taskId);
+    },
+    handleDelete(taskId) {
+      console.log("Handle delete for task ID:", taskId);
+      this.$store.dispatch("deleteTask", taskId);
     },
   },
   computed: {
