@@ -22,10 +22,10 @@ const store = createStore({
         status: payload.status,
       });
     },
-    completeTask(state, taskId) {
-      const task = state.tasks.find((task) => task.id === taskId);
+    changeTaskStatus(state, { taskId, newStatus }) {
+      const task = state.tasks.find((t) => t.id === taskId);
       if (task) {
-        task.status = "completed";
+        task.status = newStatus;
       }
     },
     deleteTask(state, taskId) {
@@ -36,22 +36,19 @@ const store = createStore({
     async loadTasks({ commit }) {
       const serializedTasks = (await localforage.getItem("tasks")) || "[]";
       const tasks = JSON.parse(serializedTasks);
-      console.log("Loaded tasks from localforage:", tasks);
       commit("setTasks", tasks);
     },
     async addTask({ commit }, task) {
-      console.log("Adding task in store:", task);
       commit("taskAdded", task);
       const serializedTasks = JSON.stringify(this.state.tasks);
       await localforage.setItem("tasks", serializedTasks);
     },
-    async completeTask({ commit }, taskId) {
-      commit("completeTask", taskId);
+    changeTaskStatus({ commit }, { taskId, newStatus }) {
+      commit("changeTaskStatus", { taskId, newStatus });
       const serializedTasks = JSON.stringify(this.state.tasks);
-      await localforage.setItem("tasks", serializedTasks);
+      localforage.setItem("tasks", serializedTasks);
     },
     async deleteTask({ commit }, taskId) {
-      console.log("Deleting task in store with ID:", taskId);
       commit("deleteTask", taskId);
       const serializedTasks = JSON.stringify(this.state.tasks);
       await localforage.setItem("tasks", serializedTasks);

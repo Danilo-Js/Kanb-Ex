@@ -4,7 +4,7 @@
     <div v-for="task in filteredTasks" :key="task.id">
       <task-card
         :task="task"
-        @complete="handleComplete"
+        @changeStatus="handleChangeStatus"
         @delete="handleDelete"
       />
     </div>
@@ -34,11 +34,10 @@ export default {
     },
   },
   methods: {
-    handleComplete(taskId) {
-      this.$store.dispatch("completeTask", taskId);
+    handleChangeStatus({ taskId, newStatus }) {
+      this.$store.dispatch("changeTaskStatus", { taskId, newStatus });
     },
     handleDelete(taskId) {
-      console.log("Handle delete for task ID:", taskId);
       this.$store.dispatch("deleteTask", taskId);
     },
   },

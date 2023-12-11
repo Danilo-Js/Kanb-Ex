@@ -1,6 +1,8 @@
 <template>
   <div class="task-card">
-    <button @click="completeTask(task.id)">Completar</button>
+    <button v-if="task.status !== 'completed'" @click="changeTaskStatus(task)">
+      {{ task.status === "active" ? "Iniciar" : "Concluir" }}
+    </button>
     <button @click="deleteTask(task.id)">Excluir</button>
     <p><strong>Nome: </strong> {{ task.name }}</p>
     <p><strong>Responsável: </strong> {{ task.responsible }}</p>
@@ -21,11 +23,11 @@ export default {
   },
   emits: ["complete", "delete"],
   methods: {
-    completeTask(taskId) {
-      this.$emit("complete", taskId);
+    changeTaskStatus(task) {
+      const newStatus = task.status === "active" ? "ongoing" : "completed";
+      this.$emit("changeStatus", { taskId: task.id, newStatus });
     },
     deleteTask(taskId) {
-      console.log("Deleting task with ID:", taskId);
       this.$emit("delete", taskId);
     },
   },
