@@ -30,7 +30,7 @@ A Kaban-like task management simulator
 </p>
 
 <p align="center">
-  <img alt="Kanban Example" src="ReadmeAssets/Presentation.png">
+  <img alt="Kanban Example" src="ReadmeAssets/Presentation.gif">
 </p>
 
 ## :rocket: About The Project
