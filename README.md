@@ -1,78 +1,48 @@
-<h1 align="center">
-  Kanban Example
-</h1>
+![Kanb-Ex](docs/assets/capa.svg)
 
-<p align="center">
-  <a href="https://img.shields.io/github/repo-size/Danilo-Js/Kanb-Ex/commits/master">
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Danilo-Js/Kanb-Ex">
-  </a>
+# Kanb-Ex
 
-  <a href="https://img.shields.io/github/issues/Danilo-Js/Kanb-Ex/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Danilo-Js/Kanb-Ex">
-  </a>
-  
-  <img alt="Repository forks" src="https://img.shields.io/github/forks/Danilo-Js/Kanb-Ex">
-  
-  <img alt="Repository stars" src="https://img.shields.io/github/stars/Danilo-Js/Kanb-Ex">
-  
-  <img alt="Repository license" src="https://img.shields.io/github/license/Danilo-Js/Kanb-Ex">
-</p>
+Quadro Kanban acadêmico para explorar organização visual de tarefas, navegação, estado compartilhado e persistência no navegador. O projeto foi apresentado em Tópicos Especiais em Programação II.
 
-<p align="center">
-A Kaban-like task management simulator
-</p>
+**Tópicos Especiais em Programação II · UFES · 2023/2**
 
-<p align="center" direction="row">
-  <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#wrench-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#arrow_down-get-this-project">Get this project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
-</p>
+Vue 3 · Vuex 4 · Vue Router 4 · LocalForage
 
-<p align="center">
-  <img alt="Kanban Example" src="ReadmeAssets/Presentation.gif">
-</p>
+[English](README.en.md) · [Meu percurso em Ciência da Computação](https://github.com/Danilo-Js/My-Computer-Science-Course)
 
-## :rocket: About The Project
-Kanban Example is a web-based application that simulates a Kanban board, an efficient tool for task management and organizational workflow visualization. This project is built using Vue.js and leverages modern JavaScript practices.
+<p align="center"><img src="ReadmeAssets/Presentation.gif" alt="Demonstração original de Kanb-Ex" width="780" /></p>
 
-This is an academic work presented to the Special Topics in Programming II discipline taught by professor Giuliano Prado as a partial grade requirement for Paper 02 of the 2nd semester of 2023.
+## O que este projeto explora
 
-## :wrench: Technologies
-This project is developed with the following technologies:
+- Decomposição da interface em componentes Vue.
+- Organização de estado e navegação entre visões.
+- Persistência local para explorar o comportamento de um aplicativo no navegador.
 
-- Vue.js
-- Vuex for state management
-- Vue Router for page navigation
-- LocalForage for offline data storage
+## Como explorar
 
-## :arrow_down: Get This Project
+| Caminho | Conteúdo |
+|---|---|
+| [Componentes, estado e rotas](src) | `src` |
+| [Demonstração original](ReadmeAssets/Presentation.gif) | `ReadmeAssets/Presentation.gif` |
+| [Dependências e comandos](package.json) | `package.json` |
 
-To get this project up and running on your local machine for development and testing purposes, follow these steps:
+## Executar ou consultar
 
-Clone this repository
 ```bash
-$ git clone https://github.com/Danilo-Js/Kanb-Ex.git
+npm ci
+npm run serve
 ```
 
-Navigate to the project directory
-```bash 
-$ cd Kanb-Ex
-```
+Os comandos disponíveis são `serve`, `build` e `lint`, definidos em [package.json](package.json). O projeto utiliza Vue CLI 5 e dependências históricas; confira compatibilidade do ambiente antes de atualizar versões.
 
-Install dependencies
-```bash 
-$ npm install
-```
+## Conceitos e contexto
 
-Serve with hot reload at localhost:8080
-```bash 
-$ npm run serve
-```
+Projeto acadêmico com armazenamento local. Não é apresentado como plataforma SaaS multiusuário ou serviço comercial implantado.
 
-## :memo: License
-This project is [licensed by MIT](https://github.com/Danilo-Js/Kanb-Ex/blob/master/LICENSE).
+## Autoria e procedência
 
----
+Danilo José Lima de Oliveira e Bernardo Mangaraviti Carrerette. Trabalho da disciplina ministrada por Giuliano Prado, segundo semestre de 2023.
 
-#### Made by Danilo José Lima de Oliveira and Bernardo Mangaraviti Carrerette
+## Licença
+
+Os termos deste acervo estão em [LICENSE](LICENSE). Os projetos e materiais vinculados conservam suas próprias condições e atribuições.
